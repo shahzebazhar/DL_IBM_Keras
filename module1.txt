@@ -1,0 +1,39 @@
+--NEURONS AND NEURAL NETWORKS
+
+-Neural networks are based on neurons and how they function in our brain.
+-Santiago Ramon 1899 drew the first image of neurons by using a pigeon brain. Father of Modern Neuroscience.
+-One big body in a neuron that branch out to connect to other neurons
+-Main body called 'soma', contains the nucleas of the neuron
+-Dendrites, small arms sticking out of body.
+-Axon are the arms that stick out and connect to other bodies.
+-The whiskers at the end of the axons are called terminal buttons or Synapse.
+
+-Dendrites recieve information
+-Soma processes the information
+-Axon takes the processed data from Soma and move it to the Synapse
+-Synapse connect to other dendrites of other somas.
+-Learning occurs by activating certain neural networks repeatedly.
+-Makes them more likely to produce the desired outcome.
+
+--ARTIFICIAL NEURAL NETWORKS
+
+-For a network, we divide the neurons into different layers.
+-First layer that provides the input: Input Layer.
+-Final layer giving the output: Output Layer.
+-Any set of nodes in between the input and output layers are called the Hidden Layers(These can be multiple).
+-Three main topics of neural networks, Forward Propagation, Backpropagation, Activation functions.
+
+-Forward Propagation
+-Each dendrite has a weight by which they are determined in soma.
+-Neuron processes the information from dendrites by producing a weighted sum.
+-A constant in added to it called the 'bias'.
+-We further map the neural sum to a non linear space(such as applying sigmoid function to it).
+
+-Activation Functions
+-Non linear transformations like sigmoid function is called activation functions.
+-These functions decide whether a neuron should be activated or not(aka is the information relevant or not).
+-A neural network without an activation is just a linear regression model.
+
+-The weight on each dendrite and bias is calculated by the network.
+-An input given can be chained over multiple neurons, if 2 neurons are connected, the input given to the first neuron has the output recieved after the last neuron processes the information.
+
