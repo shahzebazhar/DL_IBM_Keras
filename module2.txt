@@ -1,2 +1,85 @@
 --ARTIFICIAL NEURAL NETWORKS
 
+-Gradient Descent
+-Cost function: 1/2m (sum(zi - wxi)^2) where z is the prediction and wx are the weight * input
+-We try to minimize cost function
+-Gradient descent is an iterative algorithm that determines the minimum of the cost function
+-We check the gradient at each point of the cost function using the weights we currently possess
+-gradient calculated as (partial derv(J(Cost))/partial derv(w))
+-The magnitude of each step we take in the iteration is determined by the learning rate.
+-Larger the learning rate, the larger the jumps.
+-w1 = w0 - learning rate * gradient at w0
+-We repeat the gradient descent algorithm until we hit the minimum or the threshold or no. of iterations reached.
+
+-Backpropagation
+-Used to train optimal weights and biases for each neuron.
+-Steps for training.
+-Calculate the error E between ground truth and estimated output.
+-Propagate this error back into the network to update the weights and biases.
+-Equations used for optimization are same as the gradient descent one.
+- (-(T - a2)) * (a2 * (1 - a2)) * (a1)
+- Epoch = predefined number of iterations for the gradient descent.
+
+-Training Process
+-Generate random weights and biases.
+-Calculate output using forward propagation.
+-Calculate error.
+-Update the weights and biases using backpropagation.
+-Repeat until the error is below a predefined threshold or the number of epochs is reached.
+
+-Vanishing Gradient Problem
+
+-Problem with the sigmoid activation function.
+-Because the values of the sigmoid function are between 0 and 1, the values keep getting smaller and smaller as we move back.
+-Hence the previous layers learned very slowly as compared to the later layers in the network.
+
+-Activation Functions.
+
+-Types of activation functions:-
+---1)Binary Function.
+---2)Linear Function.
+---3)Sigmoid Function.
+---4)Hyperbolic Tangent Function.
+---5)ReLU (Rectified Linear Unit) Function.
+---6)Leaky ReLU Function.
+---7)Softmax Function.
+
+-Popular Ones are 3,4,5,7
+
+-Sigmoid Function
+- a = 1.0 / (1.0 + exp(-z))
+-z is very large pos number, a is close to 1.
+-z is very small neg number, a is close to 0.
+-Function answer is incredibly flat beyond the +3 and -3 regions for values of z.
+-Causes the vanishing gradient problem.
+-All values returned are positive(issue).
+-Not symmetric(not centered on the origin).
+
+-Hyperbolic tangent function
+- a = (exp(z) - exp(-z)) / (exp(z) + exp(-z))
+-Scaled version of sigmoid function.
+-Symmetric over the origin.
+-Ranges from -1 to +1.
+-Also leads to vanishing gradient problem.
+
+-ReLU Function
+-Most widely used activation function.
+- a = max(0, z)
+-non linear.
+-does not activate all the neurons at the same time.
+-If the input is negative, the neuron is deactivated(output is 0).
+-Overcomes the vanishing gradient problem.
+
+-Softmax Function
+- ai = exp(zi) / (sum[k:1->m](exp(zk)))
+-Type of sigmoid function.
+-Handy for classification problems.
+-Usually used in the output layer to gain the final output.
+
+-Sigmoid and tangent are avoided as it can lead to the vanishing gradient problem.
+-ReLU is the most widely used activation function.
+-ReLU is only used in the hidden layer.
+-Generally, we start with the ReLU function and move to other activation functions if ReLU does not yield good results.
+
+
+
