@@ -1,0 +1,29 @@
+--KERAS AND DEEP LEARNING LIBRARIES
+
+-Popular Libraries in descending order:-
+---Tensorflow
+---Keras
+---Pytorch
+---Theano -> major library before tensorflow, however not supported anymore
+
+-Tensorflow
+---Most Popular library
+---Created by google and still being actively used at google for research.
+---Released to public in 2015.
+
+-Pytorch
+---Cousin of Torch framework in Lua.
+---Supports Machine learning algos running on GPUs.
+---It was rewritten on python and is not a wrapper.
+---Released to public in 2016.
+---Gaining more popularity than tensorflow in academic research settings and deep learning requiring optimizing custom settings.
+---Supported and actively used on facebook.
+
+-Keras
+---Easiest API for Deep learning in python.
+---Syntactic simplicity, helping in fast development and creating prototypes.
+---Less control but is easier.
+---Runs on top of a low-level library, for example tensorflow.
+---Also supported by google.
+
+-If all nodes in one layer are connected to all the nodes in another layer then such a network is called a dense network.
