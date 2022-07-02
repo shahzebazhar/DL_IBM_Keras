@@ -1,0 +1,88 @@
+--DEEP LEARNING MODELS
+
+-Shallow vs Deep Neural Networks
+
+-Shallow Neural Networks
+---A neural network with one hidden layer is called a shallow neural network.
+
+-Deep Neural Networks
+---Deep neural networks have more than one hidden layer and has a large number of neurons per layer.
+---While shallow neural networks only take vector input, deep neural networks can take raw data like images and extract information from them.
+
+-Bloom in Deep Learning Field
+---Advancement in the field(removing the vanishing gradient problem for example).
+---Availability of Data(Small amount of data causes overfitting, improves more than other machine learning algorithms in the presence of a larger oamount of data).
+---Computational Power(Deep Neural networks normally build in days but using new and advance GPUs we can build them quicker).
+
+-Convolutional Neural Networks (CNNs)
+
+-Is a supervised deep learning algorithm.
+-Similar to typical neural networks
+-CNNs take input as images. It assumes explicity.
+-This allows us to incorporate properties for training that makes the process much more efficient
+-Best for solving problems related to image recognition.
+
+-CNN Architecture
+---Consists of input layer, output layer, Convolution layer, Pooling layer and Fully Connected layers.
+
+-Input Layer
+---Input to a CNN is an n x m x 1 for greyscale images and n x m x 3 for colored images, with 3 consisting the RGB colors.
+
+-Convolutional Layer
+---We define filters.
+---We compute the convolution between the defined filter and the three images, or 1 image for a greyscale image.
+---We slide the filter on the image and compute the dot product of the filter with the image values of that block that fits the image, this dot product is passed onto one cell of the resultant matrix.
+---We move our filter one stride forward and repeat the step.
+---We can apply more than one filter, the filter we use, the more we can preserve the spacial dimensions.
+---We use convolution as it reduces the amount of parameters that would otherwise be created by just flattening the image.
+---Convolution layer also consists of ReLUs for filteration.
+
+-Pooling Layer
+---Main purpose is to reduce the spacial dimensions.
+---Two types of widely used pooling: Max Pooling and Average Pooling.
+---Max Pooling
+-----For each section of the image we scan, we keep the highest value(most commonly used).
+---Average Pooling
+----For each section of the image we scan, we keep the average of those values.
+---Pooling provides spacial variance, which helps in recognizing the object in the image even if it doesn't completely resemble the target object.
+
+-Fully Connected Layer
+---We flatten the output of the last convolutional layer and connect every node of the current layer with every node of the next layer.
+---Takes the input of the previous layer and outputs an n dimensional vector.
+---n is the number of classes for the target.
+
+-Recurrent Neural Networks (RNNs)
+
+-Supervised deep learning model.
+-Treats datapoints as dependant entities.
+-A network with loops.
+-Takes a new input and also the output of the previous data point. Like a reducer.
+-Very good at modelling problems such as text, genome, stockmarket and handwriting. Basically anything that has a pattern following in its data points.
+-Takes time and sequence into account(keeps a temporal dimension).
+
+-Long Short Term Memory Model (LSTM)
+---A popular type of an RNN.
+---Applications include:-
+----Image generation
+----Handwriting generation
+----Automatically caption images and streams of videos.
+
+-Autoencoders
+
+-Unsupervised deep learning model.
+-data compression algorithm where the compression and decompression algorithm is learned directly from daata and is not constructed by a human being.
+-They are data-specific.
+-Will only be able to encode data efficiently on data that they have been trained on.
+-Applications:-
+---Data denoising.
+---Dimensionality Reduction.
+---It uses backpropagation by trying to set the target variable the same as the input(basically an identity function)
+---Can transform non linear data unlike PCA
+
+-Restricted Boltzmann Machines (RBM)
+---A popular type of autoencoder.
+---Applications:-
+----Fixing Imbalanced Dataset.
+----Can learn the patterns of a minority class and generate more dataset for that class balancing all the classes.
+----Can also estimate missing values in a dataset.
+----Automatic feature extraction.
